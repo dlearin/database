@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net">
+    <diagram id="DySczDw2r1GOO3ZqM3JP" name="Page-1">
+        <![CDATA[
+        <mxGraphModel dx="1050" dy="465" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0" />
+                <mxCell id="1" parent="0" />
+                
+                <!-- Sensor Class -->
+                <mxCell id="sensorClass" value="Sensor" style="rounded=0;whiteSpace=wrap;html=1;align=center;" vertex="1" connectable="0" parent="1">
+                    <mxGeometry x="100" y="100" width="120" height="90" as="geometry" />
+                </mxCell>
+                <mxCell id="sensorAttributes" value="SerialNumber (PK)&#xa;ManufactureDate&#xa;OperationalStatus" style="rounded=0;whiteSpace=wrap;html=1;align=center;" vertex="1" connectable="0" parent="1">
+                    <mxGeometry x="100" y="130" width="120" height="60" as="geometry" />
+                </mxCell>
+                
+                <!-- Location Class -->
+                <mxCell id="locationClass" value="Location" style="rounded=0;whiteSpace=wrap;html=1;align=center;" vertex="1" connectable="0" parent="1">
+                    <mxGeometry x="300" y="100" width="120" height="150" as="geometry" />
+                </mxCell>
+                <mxCell id="locationAttributes" value="LocationID (PK)&#xa;Latitude&#xa;Longitude&#xa;Altitude&#xa;YearOfInstallation&#xa;Environment&#xa;SensorSerial (FK)" style="rounded=0;whiteSpace=wrap;html=1;align=center;" vertex="1" connectable="0" parent="1">
+                    <mxGeometry x="300" y="130" width="120" height="120" as="geometry" />
+                </mxCell>
+                
+                <!-- Host Server Class -->
+                <mxCell id="hostServerClass" value="Host Server" style="rounded=0;whiteSpace=wrap;html=1;align=center;" vertex="1" connectable="0" parent="1">
+                    <mxGeometry x="500" y="100" width="120" height="90" as="geometry" />
+                </mxCell>
+                <mxCell id="hostServerAttributes" value="IPAddress (PK)&#xa;Status" style="rounded=0;whiteSpace=wrap;html=1;align=center;" vertex="1" connectable="0" parent="1">
+                    <mxGeometry x="500" y="130" width="120" height="60" as="geometry" />
+                </mxCell>
+                
+                <!-- Relationships -->
+                <mxCell id="sensorLocationRelation" style="edgeStyle=orthogonalEdgeStyle;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="sensorClass" target="locationClass">
+                    <mxGeometry relative="1" as="geometry" />
+                </mxCell>
+                <mxCell id="sensorHostServerRelation" style="edgeStyle=orthogonalEdgeStyle;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="sensorClass" target="hostServerClass">
+                    <mxGeometry relative="1" as="geometry" />
+                </mxCell>
+            </root>
+        </mxGraphModel>
+        ]]>
+    </diagram>
+</mxfile>
